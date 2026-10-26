@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 1 Interactive Circle</title>
+  <style>
+    body { font-family: sans-serif; margin: 24px; }
+    canvas {
+      display: block; max-width: 100%; height: auto;
+      background: #f3f4f6; margin: 12 px 0;
+      touch-action: none;
+    }
+    button, input { margin-right: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Interactive Circle</h1>
+    <label for="selected">Selected circle</label>
+  <select id="selected">
+    <option value="0">Circle 1</option>
+    <option value="1">Circle 2</option>
+    <option value="2">Circle 3</option>
+  </select>
+  <label for="color">Circle color</label>
+  <input id="color" type="color" value="#2563eb">
+  <button id="toggle" type="button">Pause</button>
+  <button id="reset" type="button">Reset</button>
+    <label for="speed">Speed</label>
+  <input id="speed" type="number" value="120">
+  <button id="apply" type="button">Apply</button>
+  <canvas id="scene" width="640" height="360"
+          aria-label="An animated circle">
+    This example requires a browser with canvas support.
+  </canvas>
+  <p id="status"></p>
+    <p id="message"></p>
+  <p>Click or touch to place the circle. Use the controls above.</p>
+  <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
